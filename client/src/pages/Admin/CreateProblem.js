@@ -32,7 +32,7 @@ const CreateProblem = () => {
 
 
             const { data } = axios.post(
-                "http://localhost:8080/api/v1/product/create-problem",
+                "https://zsxs.onrender.com/api/v1/product/create-problem",
                 productData
             );
             if (data?.success) {

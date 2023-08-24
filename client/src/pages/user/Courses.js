@@ -14,7 +14,7 @@ const Courses = () => {
     const navigate = useNavigate();
     const getOrders = async () => {
         try {
-            const { data } = await axios.get("http://localhost:8080/api/v1/auth/orders");
+            const { data } = await axios.get("https://zsxs.onrender.com/api/v1/auth/orders");
             setOrders(data);
         } catch (error) {
             console.log(error);
@@ -43,7 +43,7 @@ const Courses = () => {
                                     <div className="row mb-2 p-3 card flex-row" key={p._id}>
                                         <div className="col-md-8">
                                             <embed
-                                                src={`http://localhost:8080/api/v1/product/product-content2/${p._id}`}
+                                                src={`https://zsxs.onrender.com/api/v1/product/product-content2/${p._id}`}
                                                 className="card-img-top"
                                                 alt={p.name}
                                                 width={"400px"}
@@ -53,12 +53,12 @@ const Courses = () => {
                                             <p className="studymaterial-name">{p.name}</p>
                                             <p className="studymaterial-desc">{p.description}</p>
                                             <button className="btn-manual btn-opem-in-new-tab">
-                                                <a href={`http://localhost:8080/api/v1/product/product-content2/${p._id}`} target="_blank">Open in new Tab</a>
+                                                <a href={`https://zsxs.onrender.com/api/v1/product/product-content2/${p._id}`} target="_blank">Open in new Tab</a>
                                             </button>
                                         </div>
                                         <div className="col-md-4">
                                             <embed
-                                                src={`http://localhost:8080/api/v1/product/product-content1/${p._id}`}
+                                                src={`https://zsxs.onrender.com/api/v1/product/product-content1/${p._id}`}
                                                 className="card-img-top"
                                                 alt={p.name}
                                                 width={"400px"}

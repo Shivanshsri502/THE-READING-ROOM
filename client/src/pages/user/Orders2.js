@@ -14,7 +14,7 @@ const Orders = () => {
     const navigate = useNavigate();
     const getOrders = async () => {
         try {
-            const { data } = await axios.get("http://localhost:8080/api/v1/auth/orders");
+            const { data } = await axios.get("https://zsxs.onrender.com/api/v1/auth/orders");
             setOrders(data);
         } catch (error) {
             console.log(error);
@@ -43,14 +43,14 @@ const Orders = () => {
                                         <div className="row mb-2 p-3 card flex-row" key={p._id}>
                                             <div className="col-md-7">
                                                 <embed
-                                                    src={`http://localhost:8080/api/v1/product/product-content1/${p._id}`}
+                                                    src={`https://zsxs.onrender.com/api/v1/product/product-content1/${p._id}`}
                                                     className="card-img-top"
                                                     alt={p.name}
                                                     width={"400px"}
                                                     height={"300px"}
 
                                                 />
-                                                <a href={`http://localhost:8080/api/v1/product/product-content1/${p._id}`}>Open in new Tab</a>
+                                                <a href={`https://zsxs.onrender.com/api/v1/product/product-content1/${p._id}`}>Open in new Tab</a>
                                             </div>
                                             <div className="col-md-5">
                                                 <p>{p.name}</p>
