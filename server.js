@@ -35,6 +35,7 @@ app.use("/api/v1/product", productRoutes);
 
 //rest api
 app.get("/", (req, res) => {
+  res.setHeader("Access-Control-Allow-Credential", "true");
   res.send("<h1>Welcome to ecommerce app</h1>");
 });
 
