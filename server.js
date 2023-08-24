@@ -8,7 +8,7 @@ import categoryRoutes from "./routes/categoryRoutes.js";
 import productRoutes from "./routes/productRoutes.js";
 import cors from "cors";
 import bodyParser from 'body-parser'
-const path = require('path')
+import * as path from 'path'
 
 //configure env
 dotenv.config();
