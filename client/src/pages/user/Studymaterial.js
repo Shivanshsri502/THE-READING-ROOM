@@ -14,7 +14,7 @@ const Studymaterial = () => {
     const navigate = useNavigate();
     const getOrders = async () => {
         try {
-            const { data } = await axios.get("http://localhost:8080/api/v1/auth/orders");
+            const { data } = await axios.get("https://the-reading-room-3z29.onrender.com/api/v1/auth/orders");
             setOrders(data);
         } catch (error) {
             console.log(error);
@@ -40,7 +40,7 @@ const Studymaterial = () => {
                                     <div className="row mb-2 p-3 card flex-row" key={p._id}>
                                         <div className="col-md-7">
                                             <embed
-                                                src={`http://localhost:8080/api/v1/product/product-content1/${p._id}`}
+                                                src={`https://the-reading-room-3z29.onrender.com/api/v1/product/product-content1/${p._id}`}
                                                 className="card-img-top"
                                                 alt={p.name}
                                                 width={"400px"}
@@ -48,7 +48,7 @@ const Studymaterial = () => {
 
                                             />
                                             <button className="btn-manual btn-opem-in-new-tab">
-                                                <a href={`http://localhost:8080/api/v1/product/product-content1/${p._id}`} target="_blank">Open in new Tab</a>
+                                                <a href={`https://the-reading-room-3z29.onrender.com/api/v1/product/product-content1/${p._id}`} target="_blank">Open in new Tab</a>
                                             </button>
 
                                         </div>

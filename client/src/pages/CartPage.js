@@ -26,7 +26,7 @@ const CartPage = () => {
   //getall products
   // const getAllProducts = async () => {
   //   try {
-  //     const res = await axios.get("http://localhost:8080/api/v1/product/get-product");
+  //     const res = await axios.get("https://the-reading-room-3z29.onrender.com/api/v1/product/get-product");
   //     // setProducts2(data2.products);
   //     // console.log(products2);
   //     console.log(res.data.products);
@@ -94,7 +94,7 @@ const CartPage = () => {
   //get payment gateway token
   const getToken = async () => {
     try {
-      const { data } = await axios.get("http://localhost:8080/api/v1/product/braintree/token");
+      const { data } = await axios.get("https://the-reading-room-3z29.onrender.com/api/v1/product/braintree/token");
       setClientToken(data?.clientToken);
     } catch (error) {
       console.log(error);
@@ -113,7 +113,7 @@ const CartPage = () => {
     try {
       setLoading(true);
       const { nonce } = await instance.requestPaymentMethod();
-      const { data } = await axios.post("http://localhost:8080/api/v1/product/braintree/payment", {
+      const { data } = await axios.post("https://the-reading-room-3z29.onrender.com/api/v1/product/braintree/payment", {
         nonce,
         cart,
       });
@@ -152,7 +152,7 @@ const CartPage = () => {
                 <div className="row card flex-row" key={p._id}>
                   <div className="col-md-4">
                     <img
-                      src={`http://localhost:8080/api/v1/product/product-photo/${p._id}`}
+                      src={`https://the-reading-room-3z29.onrender.com/api/v1/product/product-photo/${p._id}`}
                       className="card-img-top"
                       alt={p.name}
                       width="100%"
