@@ -16,7 +16,7 @@ const ForgotPasssword = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("https://zsxs.onrender.com/api/v1/auth/forgot-password", {
+      const res = await axios.post("http://localhost:8080/api/v1/auth/forgot-password", {
         email,
         newPassword,
         answer,
@@ -34,7 +34,7 @@ const ForgotPasssword = () => {
     }
   };
   return (
-    <Layout title={"Forgot Password - Ecommerce APP"}>
+    <Layout title={"Forgot Password - The Reading Room APP"}>
       <div className="form-container ">
         <form onSubmit={handleSubmit}>
           <h4 className="title">RESET PASSWORD</h4>

@@ -26,7 +26,7 @@ function App2() {
     //getall products
     const getAllProblem = async () => {
         try {
-            const { data } = await axios.get("https://zsxs.onrender.com/api/v1/product/get-problem");
+            const { data } = await axios.get("http://localhost:8080/api/v1/product/get-problem");
             setQuizs(data.problem);
         } catch (error) {
             console.log(error);

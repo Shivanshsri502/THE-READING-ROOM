@@ -21,7 +21,7 @@ const CreateProduct = () => {
   //get all category
   const getAllCategory = async () => {
     try {
-      const { data } = await axios.get("https://zsxs.onrender.com/api/v1/category/get-category");
+      const { data } = await axios.get("http://localhost:8080/api/v1/category/get-category");
       if (data?.success) {
         setCategories(data?.category);
       }
@@ -50,7 +50,7 @@ const CreateProduct = () => {
       productData.append("content2", content2);
       console.log(productData);
       const { data } = axios.post(
-        "https://zsxs.onrender.com/api/v1/product/create-product",
+        "http://localhost:8080/api/v1/product/create-product",
         productData
       );
       if (data?.success) {

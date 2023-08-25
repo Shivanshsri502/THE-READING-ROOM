@@ -1,10 +1,12 @@
+.home {
+  display: grid;
+}
+
 .banner-img {
   margin-top: 60px;
 }
- .home-page h1 {
-
+.home-page h1 {
   font-family: "Playfair Display", serif;
-
 }
 
 .home-page {
